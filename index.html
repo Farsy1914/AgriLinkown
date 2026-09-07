@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - Empowering Sustainable Agriculture</title>
+  <style>
+    :root {
+      --primary: #10b981;
+      --primary-dark: #064e3b;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* Header / Navbar */
+    .navbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .brand { font-size: 1.6rem; font-weight: bold; color: var(--primary-dark); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* Buttons */
+    .btn { background: var(--primary); color: white; border: none; padding: 10px 22px; border-radius: 8px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .btn:hover { background: #059669; }
+    .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+    .btn-outline:hover { background: var(--primary); color: white; }
+
+    /* Hero Section */
+    .hero { padding: 80px 20px; text-align: center; background: linear-gradient(135deg, #ecfdf5 0%, #f8fafc 100%); border-bottom: 1px solid var(--border); }
+    .hero h1 { font-size: 3rem; color: var(--primary-dark); margin-bottom: 16px; font-weight: 800; }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 700px; margin: 0 auto 32px; }
+
+    /* Features Section */
+    .features { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .section-title { text-align: center; font-size: 2rem; color: var(--primary-dark); margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card { background: var(--surface); padding: 32px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: center; }
+    .card-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .card h3 { color: var(--primary-dark); margin-bottom: 12px; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* Role Selection Modal */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px); z-index: 1000; justify-content: center; align-items: center; }
+    .modal { background: var(--surface); padding: 32px; border-radius: 16px; width: 90%; max-width: 600px; position: relative; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+    .close-btn { position: absolute; top: 16px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--muted); border: none; background: none; }
+    
+    .role-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 24px; }
+    .role-box { border: 2px solid var(--border); padding: 20px; border-radius: var(--radius); text-align: center; cursor: pointer; transition: all 0.2s; text-decoration: none; color: var(--text); }
+    .role-box:hover { border-color: var(--primary); background: #ecfdf5; transform: translateY(-3px); }
+    .role-box h4 { margin: 8px 0 4px; color: var(--primary-dark); }
+    .role-box p { font-size: 0.8rem; color: var(--muted); }
+
+    /* Footer */
+    footer { background: var(--primary-dark); color: white; text-align: center; padding: 30px; margin-top: 60px; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="brand">🌱 AgriLink</a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About Us</a>
+      <button class="btn btn-outline" onclick="openModal()">Sign In</button>
+      <button class="btn" onclick="openModal()">Get Started</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Direct Farm Trading & Smart Agricultural Investments</h1>
+    <p>AgriLink connects local farmers directly with crop buyers, crowdfunding investors, and agricultural experts in one unified ecosystem.</p>
+    <div style="display: flex; gap: 16px; justify-content: center;">
+      <button class="btn" style="padding: 14px 32px; font-size: 1.05rem;" onclick="openModal()">Join AgriLink Ecosystem</button>
+      <a href="#features" class="btn btn-outline" style="padding: 14px 32px; font-size: 1.05rem;">Explore Ecosystem</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2 class="section-title">Core Ecosystem Features</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🧑‍🌾</div>
+        <h3>Direct Crop Marketplace</h3>
+        <p>Farmers list organic produce directly without middlemen, ensuring fair prices and fresh products for buyers.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💰</div>
+        <h3>Farm Crowdfunding</h3>
+        <p>Investors fund verified agricultural campaigns and share seasonal yields with transparent ROI tracking.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔬</div>
+        <h3>AI & Expert Advisory</h3>
+        <p>Crop disease diagnostics powered by AI, audited and verified by expert agricultural analysts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 AgriLink Agricultural Ecosystem. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Role Selection Modal (Popup) -->
+  <div class="modal-overlay" id="roleModal">
+    <div class="modal">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <h2 style="color: var(--primary-dark); text-align: center;">Welcome to AgriLink</h2>
+      <p style="text-align: center; color: var(--muted); margin-top: 4px;">Choose your account role to continue to the portal:</p>
+      
+      <div class="role-options">
+        <!-- Farmer Option -->
+        <a href="farmer/farmer.html" class="role-box">
+          <div style="font-size: 2rem;">🧑‍🌾</div>
+          <h4>Farmer</h4>
+          <p>Sell crops & request farm funding</p>
+        </a>
+
+        <!-- Buyer Option -->
+        <a href="buyer/marketplace.html" class="role-box">
+          <div style="font-size: 2rem;">🛒</div>
+          <h4>Buyer / Investor</h4>
+          <p>Purchase produce & fund farms</p>
+        </a>
+
+        <!-- Analyst Option -->
+        <a href="analyst/analyst-dashboard.html" class="role-box">
+          <div style="font-size: 2rem;">📊</div>
+          <h4>Analyst</h4>
+          <p>Audit projects & diagnostics</p>
+        </a>
+
+        <!-- Admin Option -->
+        <a href="admin/admin-dashboard.html" class="role-box" style="grid-column: span 1;">
+          <div style="font-size: 2rem;">🛡️</div>
+          <h4>Admin</h4>
+          <p>System control & verification</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Modal Control -->
+  <script>
+    function openModal() {
+      document.getElementById('roleModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('roleModal').style.display = 'none';
+    }
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('roleModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
