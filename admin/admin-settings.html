@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - System Settings</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="admin-dashboard.html" class="brand">🛡️ AgriLink Admin</a>
+    <nav>
+      <a href="admin-dashboard.html">Control Center</a>
+      <a href="admin-user-management.html">User Approvals & Management</a>
+      <a href="admin-content-moderation.html">Marketplace & Project Audits</a>
+      <a href="admin-profile.html">Admin Profile</a>
+      <a href="admin-settings.html" class="active">System Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>System Configuration & Global Rules</h2>
+        <p style="color: var(--text-muted);">Adjust platform charges, API credentials, and platform security policies.</p>
+      </div>
+      <a href="admin-profile.html" class="avatar" title="Admin Profile">AD</a>
+    </header>
+
+    <!-- Platform Charges -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-color);">Commission Rate Settings</h3>
+      <div class="form-grid">
+        <div>
+          <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Crowdfunding Platform Fee (%)</label>
+          <input type="number" value="2.5" step="0.1">
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Marketplace Order Fee (%)</label>
+          <input type="number" value="1.5" step="0.1">
+        </div>
+      </div>
+    </section>
+
+    <!-- Maintenance Controls -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-color);">System Mode & Security Switch</h3>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; cursor: pointer;">
+          <input type="checkbox" style="width: auto;">
+          <span>Enable Maintenance Mode (Restricts public access to UI)</span>
+        </label>
+        <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; cursor: pointer;">
+          <input type="checkbox" checked style="width: auto;">
+          <span>Require Analyst Approval before publishing Crowdfunding campaigns above ৳2,00,000.</span>
+        </label>
+      </div>
+    </section>
+
+    <button type="button" class="btn" onclick="alert('Global Settings Saved!')" style="padding: 12px 32px; width: auto;">Save Global Configurations</button>
+  </main>
+
+</body>
+</html>
