@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - System Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="admin-dashboard.html" class="brand">🛡️ AgriLink Admin</a>
+    <nav>
+      <a href="admin-dashboard.html" class="active">Control Center</a>
+      <a href="admin-user-management.html">User Approvals & Management</a>
+      <a href="admin-content-moderation.html">Marketplace & Project Audits</a>
+      <a href="admin-profile.html">Admin Profile</a>
+      <a href="admin-settings.html">System Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>System Overview & Controls</h2>
+        <p style="color: var(--text-muted);">Real-time monitoring of platform revenue, user verification queues, and system health.</p>
+      </div>
+      <a href="admin-profile.html" class="avatar" title="Admin Profile">AD</a>
+    </header>
+
+    <!-- System Stats -->
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Total Platform Users</h4>
+        <div class="value">12,480</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Pending NID / Trade Approvals</h4>
+        <div class="value" style="color: #f59e0b;">18 Users</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Platform Escrow Capital</h4>
+        <div class="value" style="color: #10b981;">৳45,20,000</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Active System Alerts</h4>
+        <div class="value" style="color: #ef4444;">2 Reports</div>
+      </div>
+    </section>
+
+    <!-- Recent Platform Transactions & Audits -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-color);">System Financials & Escrow Overview</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Type</th>
+            <th>Payer</th>
+            <th>Payee</th>
+            <th>Amount</th>
+            <th>Commission Fee (2%)</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#TXN-90821</td>
+            <td>Crowdfunding Investment</td>
+            <td>Tanvir Ahmed (Investor)</td>
+            <td>Rahim Uddin (Farmer)</td>
+            <td>৳50,000</td>
+            <td>৳1,000</td>
+            <td><span class="badge badge-verified">Escrow Locked</span></td>
+          </tr>
+          <tr>
+            <td>#TXN-90822</td>
+            <td>Crop Purchase Order</td>
+            <td>GreenAgro Traders</td>
+            <td>Karim Hossain (Farmer)</td>
+            <td>৳12,000</td>
+            <td>৳240</td>
+            <td><span class="badge badge-verified">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>
