@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Professional Analyst Profile</title>
+  <link rel="stylesheet" href="analyst-style.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <a href="analyst-dashboard.html" class="brand">📊 AgriLink Insights</a>
+    <nav>
+      <a href="analyst-dashboard.html">Overview & Analytics</a>
+      <a href="project-audits.html">Project Feasibility Audits</a>
+      <a href="crop-diagnostics.html">AI Disease Diagnostics</a>
+      <a href="analyst-profile.html" class="active">My Profile</a>
+      <a href="analyst-settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Expert Analyst Profile</h2>
+        <p style="color: var(--text-muted);">Manage your professional identity, academic credentials, and verification status.</p>
+      </div>
+      <a href="analyst-profile.html" class="avatar">AN</a>
+    </header>
+
+    <!-- Professional Profile Banner -->
+    <section class="card" style="display: flex; align-items: center; gap: 24px; padding: 24px;">
+      <div style="width: 90px; height: 90px; border-radius: 50%; background-color: var(--primary-dark); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; border: 3px solid var(--accent-color);">
+        DR
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <h2 style="color: var(--primary-dark);">Dr. Abul Kalam Azad</h2>
+          <span class="badge badge-verified">✓ Senior Certified Agronomist</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 4px;">Chief Soil Scientist & Agricultural Risk Auditor</p>
+        <p style="font-size: 0.85rem; color: var(--accent-color); margin-top: 6px;"><strong>Institutional Partner:</strong> Bangladesh Agricultural Research Institute (BARI)</p>
+      </div>
+    </section>
+
+    <form>
+      <!-- Academic & Professional Info -->
+      <section class="card">
+        <h3 style="margin-bottom: 16px; color: var(--primary-dark);">Academic & Professional Background</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Highest Qualification</label>
+            <input type="text" value="Ph.D. in Soil & Crop Sciences (BAU)">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Specialization Area</label>
+            <select>
+              <option selected>Yield Prediction & Disease Diagnostics</option>
+              <option>Climate & Flood Risk Modeling</option>
+              <option>Agricultural Finance & Feasibility</option>
+            </select>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Years of Field Experience</label>
+            <input type="number" value="14">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Government Certification ID</label>
+            <input type="text" value="AGRI-BD-2018-9902" readonly style="background-color: var(--bg-color);">
+          </div>
+        </div>
+      </section>
+
+      <!-- Institutional Verification & Bio -->
+      <section class="card">
+        <h3 style="margin-bottom: 16px; color: var(--primary-dark);">Professional Bio & Research Summary</h3>
+        <div style="margin-bottom: 16px;">
+          <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Executive Bio</label>
+          <textarea rows="4" style="width: 100%; font-size: 0.95rem; line-height: 1.5;">Specialized in North-Bengal crop yield evaluation, soil pathogen diagnostics, and agricultural crowdfunding risk assessments. Published over 12 research papers on organic wheat optimization.</textarea>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Government / Institutional ID Document</label>
+            <input type="file">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Official Digital Stamp/Signature</label>
+            <input type="file">
+          </div>
+        </div>
+      </section>
+
+      <button type="button" class="btn btn-success" onclick="alert('Analyst Credentials Saved Successfully!')" style="padding: 12px 32px; width: auto;">Save Profile Updates</button>
+    </form>
+  </main>
+
+</body>
+</html>
