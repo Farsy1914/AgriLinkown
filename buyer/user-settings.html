@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Settings</title>
+  <link rel="stylesheet" href="user-style.css">
+</head>
+<body>
+
+  <!-- Sidebar Component with Profile Link -->
+  <aside class="sidebar">
+    <a href="marketplace.html" class="brand">🌱 AgriLink Buyer</a>
+    <nav>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="investment-list.html">Investments</a>
+      <a href="my-investments.html">My Investments</a>
+      <a href="my-orders.html">My Orders</a>
+      <a href="edit-profile.html">My Profile</a>
+      <a href="user-settings.html" class="active">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Account Settings</h2>
+        <p style="color: var(--text-muted);">Manage security, payment preferences, and alert notifications.</p>
+      </div>
+      <a href="edit-profile.html" class="avatar">US</a>
+    </header>
+
+    <!-- Section 1: Security & Password -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-dark);">Security & Authentication</h3>
+      <div class="form-grid">
+        
+        <!-- Current Password -->
+        <div class="form-group">
+          <label>Current Password</label>
+          <div style="position: relative; display: flex; align-items: center;">
+            <input type="password" id="current-pass" placeholder="••••••••" style="padding-right: 65px;">
+            <button type="button" onclick="togglePassword('current-pass', this)" style="position: absolute; right: 10px; background: none; border: none; color: var(--primary-color); font-weight: 600; font-size: 0.85rem; cursor: pointer; width: auto;">Show</button>
+          </div>
+        </div>
+
+        <!-- New Password -->
+        <div class="form-group">
+          <label>New Password</label>
+          <div style="position: relative; display: flex; align-items: center;">
+            <input type="password" id="new-pass" placeholder="New Password" style="padding-right: 65px;">
+            <button type="button" onclick="togglePassword('new-pass', this)" style="position: absolute; right: 10px; background: none; border: none; color: var(--primary-color); font-weight: 600; font-size: 0.85rem; cursor: pointer; width: auto;">Show</button>
+          </div>
+        </div>
+
+      </div>
+      <button type="button" class="btn btn-secondary" style="margin-top: 8px; width: auto;">Update Password</button>
+    </section>
+
+    <!-- Section 2: Default Payment & Returns Bank -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-dark);">Payout & Return Bank Account</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+        Where should AgriLink send your crowdfunding returns and yields?
+      </p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Payout Method</label>
+          <select>
+            <option>Bank Account Transfer</option>
+            <option>bKash Merchant Account</option>
+            <option>Nagad</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bank / Mobile Account Number</label>
+          <input type="text" value="1502203948571001 (BRAC Bank)">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Notification Preferences -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-dark);">Notification Preferences</h3>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        
+        <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; width: fit-content; cursor: pointer;">
+          <input type="checkbox" checked style="width: auto;"> 
+          <span>Email notifications for crop order status updates.</span>
+        </label>
+        
+        <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; width: fit-content; cursor: pointer;">
+          <input type="checkbox" checked style="width: auto;"> 
+          <span>SMS alerts for seasonal return payouts and investment updates.</span>
+        </label>
+        
+        <label style="display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; width: fit-content; cursor: pointer;">
+          <input type="checkbox" style="width: auto;"> 
+          <span>Promotional alerts for new high-yield farming projects.</span>
+        </label>
+
+      </div>
+    </section>
+
+    <button type="button" class="btn" onclick="alert('Settings Saved Successfully!')" style="padding: 12px 32px; width: auto;">Save Preferences</button>
+  </main>
+
+  <!-- JavaScript for Toggle Password -->
+  <script>
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === "password") {
+        input.type = "text";
+        btn.textContent = "Hide";
+      } else {
+        input.type = "password";
+        btn.textContent = "Show";
+      }
+    }
+  </script>
+
+</body>
+</html>
