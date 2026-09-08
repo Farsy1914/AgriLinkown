@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - Orders & Sales</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" >Dashboard</a>
+      <a href="myCrops.html">My Crops / Marketplace</a>
+      <a href="crowdFunding.html">Crowdfunding Projects</a>
+      <a href="ordersSales.html" class="active">Orders & Sales</a>
+      <a href="advisoryWeather.html">AI Advisory & Weather</a>
+      <a href="farmerSettings.html">Settings</a>
+      <a href="farmerProfile.html">Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Orders & Sales Management</h2>
+        <p style="color: var(--text-muted);">Track customer orders, manage deliveries, and view sales history.</p>
+      </div>
+      <div class="user-profile">
+        <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;"></a>
+        <div class="avatar">RU</div>
+      </div>
+    </header>
+
+    <!-- Sales Performance Stats -->
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Total Revenue</h4>
+        <div class="value">৳1,45,200</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Completed Orders</h4>
+        <div class="value">34 Orders</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Pending Deliveries</h4>
+        <div class="value" style="color: var(--accent-color);">4 Orders</div>
+      </div>
+    </section>
+
+    <!-- Orders Filter & Table -->
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3>Customer Order Log</h3>
+        <div>
+          <select style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; margin-right: 8px;">
+            <option value="all">All Status</option>
+            <option value="pending">Pending</option>
+            <option value="transit">In Transit</option>
+            <option value="completed">Completed</option>
+          </select>
+          <input type="text" placeholder="Search Order ID..." style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; width: 180px;">
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Crop Name</th>
+            <th>Buyer Name</th>
+            <th>Delivery Address</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>#ORD-1026</strong></td>
+            <td>Organic Wheat (200 kg)</td>
+            <td>Jamal Super Shop</td>
+            <td>Mirpur, Dhaka</td>
+            <td>৳24,000</td>
+            <td><span class="badge badge-warning">Pending Approval</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Accept Order</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>#ORD-1025</strong></td>
+            <td>Fresh Tomatoes (50 kg)</td>
+            <td>Dhaka Fresh LLC</td>
+            <td>Uttara, Dhaka</td>
+            <td>৳3,000</td>
+            <td><span class="badge badge-warning">In Transit</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: var(--primary-dark);">Track Logistics</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>#ORD-1024</strong></td>
+            <td>Basmati Rice (500 kg)</td>
+            <td>Green Agro Traders</td>
+            <td>Sadar, Bogura</td>
+            <td>৳90,000</td>
+            <td><span class="badge badge-success">Completed</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: #64748b;">View Receipt</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>

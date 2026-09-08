@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - Crowdfunding Projects</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" >Dashboard</a>
+      <a href="myCrops.html">My Crops / Marketplace</a>
+      <a href="crowdFunding.html" class="active">Crowdfunding Projects</a>
+      <a href="ordersSales.html">Orders & Sales</a>
+      <a href="advisoryWeather.html">AI Advisory & Weather</a>
+      <a href="farmerSettings.html">Settings</a>
+      <a href="farmerProfile.html">Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Crowdfunding Projects</h2>
+        <p style="color: var(--text-muted);">Raise capital for your seasonal crops and share returns with investors.</p>
+      </div>
+      <div class="user-profile">
+        <button class="btn" style="margin-right: 12px;">+ Create New Campaign</button>
+                <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;"></a>
+        <div class="avatar">RU</div>
+      </div>
+    </header>
+
+    <!-- Investment Overview Stats -->
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Total Funds Raised</h4>
+        <div class="value">৳1,85,000</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Active Campaigns</h4>
+        <div class="value">2 Projects</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Total Investors</h4>
+        <div class="value">14 People</div>
+      </div>
+    </section>
+
+    <!-- Active Crowdfunding Campaigns Grid -->
+    <h3 style="margin-bottom: 16px;">Active Campaigns</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 32px;">
+      
+      <!-- Project Card 1 -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <h3>Organic Wheat Phase 1</h3>
+          <span class="badge badge-success">ROI: 15%</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">📍 Bogura, Rajshahi | Duration: 6 Months</p>
+        
+        <!-- Progress Bar -->
+        <div style="background-color: var(--border-color); height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 8px;">
+          <div style="background-color: var(--primary-color); width: 85%; height: 100%;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          <span>Raised: ৳85,000</span>
+          <span>Target: ৳1,00,000 (85%)</span>
+        </div>
+
+        <button class="btn" style="width: 100%;">Post Project Update</button>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <h3>Summer Tomato Cultivation</h3>
+          <span class="badge badge-success">ROI: 18%</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">📍 Jessore, Khulna | Duration: 4 Months</p>
+        
+        <!-- Progress Bar -->
+        <div style="background-color: var(--border-color); height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 8px;">
+          <div style="background-color: var(--accent-color); width: 50%; height: 100%;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          <span>Raised: ৳1,00,000</span>
+          <span>Target: ৳2,00,000 (50%)</span>
+        </div>
+
+        <button class="btn" style="width: 100%;">Post Project Update</button>
+      </div>
+
+    </div>
+
+    <!-- Recent Investor Log -->
+    <section class="card">
+      <h3>Recent Investor Backers</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Investor Name</th>
+            <th>Project</th>
+            <th>Amount Funded</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tanvir Ahmed</td>
+            <td>Organic Wheat Phase 1</td>
+            <td>৳25,000</td>
+            <td>02 Sep 2026</td>
+            <td><span class="badge badge-success">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td>Sumi Rahman</td>
+            <td>Summer Tomato Cultivation</td>
+            <td>৳50,000</td>
+            <td>28 Aug 2026</td>
+            <td><span class="badge badge-success">Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>

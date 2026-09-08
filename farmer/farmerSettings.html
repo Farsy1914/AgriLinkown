@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - Farmer Profile & Settings</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" >Dashboard</a>
+      <a href="myCrops.html">My Crops / Marketplace</a>
+      <a href="crowdFunding.html">Crowdfunding Projects</a>
+      <a href="ordersSales.html">Orders & Sales</a>
+      <a href="advisoryWeather.html">AI Advisory & Weather</a>
+      <a href="farmerSettings.html" class="active">Settings</a>
+      <a href="farmerProfile.html">Profile</a>
+      
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Account & Farm Settings</h2>
+        <p style="color: var(--text-muted);">Manage your personal details, farm verification, and payment options.</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar">RU</div>
+        <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;"></a>
+      </div>
+    </header>
+
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      
+      <!-- Personal Information Card -->
+      <section class="card">
+        <h3 style="margin-bottom: 16px;">Personal Profile Information</h3>
+        <form style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          <div>
+            <label style="display: block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">Full Name</label>
+            <input type="text" value="Rahim Uddin" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">Phone Number</label>
+            <input type="text" value="+880 1712-345678" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">Farm Location</label>
+            <input type="text" value="Sadar, Bogura, Rajshahi" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">Total Land Size (Acres)</label>
+            <input type="text" value="3.5 Acres" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+          </div>
+        </form>
+        <button class="btn" style="margin-top: 16px;">Save Changes</button>
+      </section>
+
+      <!-- Verification & Documents -->
+      <section class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h3>Farmer Verification Status</h3>
+          <span class="badge badge-success">Verified Farmer</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+          Your NID and Agricultural License are verified by AgriLink Admin.
+        </p>
+        <div style="display: flex; gap: 16px;">
+          <button class="btn" style="background-color: #64748b;">View NID Document</button>
+          <button class="btn" style="background-color: #64748b;">Update Land Credentials</button>
+        </div>
+      </section>
+
+      <!-- Payout Settings (Bank / Mobile Banking) -->
+      <section class="card">
+        <h3 style="margin-bottom: 16px;">Payout / Withdrawal Methods</h3>
+        <form style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 16px;">
+          <div>
+            <label style="display: block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">Preferred Payout Method</label>
+            <select style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+              <option value="bkash">bKash Mobile Banking</option>
+              <option value="nagad">Nagad</option>
+              <option value="bank">Bank Account Transfer</option>
+            </select>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">Account / Mobile Number</label>
+            <input type="text" value="01712345678" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px;">
+          </div>
+        </form>
+        <button class="btn">Update Payout Details</button>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>

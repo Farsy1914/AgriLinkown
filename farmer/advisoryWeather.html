@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - AI Advisory & Weather</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" >Dashboard</a>
+      <a href="myCrops.html">My Crops / Marketplace</a>
+      <a href="crowdFunding.html">Crowdfunding Projects</a>
+      <a href="ordersSales.html">Orders & Sales</a>
+      <a href="advisoryWeather.html" class="active">AI Advisory & Weather</a>
+      <a href="farmerSettings.html">Settings</a>
+      <a href="farmerProfile.html">Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>AI Smart Advisory & Weather Forecast</h2>
+        <p style="color: var(--text-muted);">Real-time weather insights, soil health, and AI crop diagnostics.</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar">RU</div>
+        <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;"></a>
+      </div>
+    </header>
+
+    <!-- Weather & Alert Section -->
+    <section class="grid-stats" style="grid-template-columns: 2fr 1fr;">
+      <!-- Live Weather Widget -->
+      <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h3 style="margin-bottom: 8px;">📍 Bogura, Bangladesh</h3>
+          <h1 style="font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 8px;">28°C</h1>
+          <p style="color: var(--text-muted);">Partly Cloudy • Humidity: 75% • Rain: 10%</p>
+        </div>
+        <div style="text-align: right;">
+          <span style="font-size: 3rem;">⛅</span>
+          <p style="color: var(--primary-color); font-weight: bold; margin-top: 8px;">Good condition for harvesting</p>
+        </div>
+      </div>
+
+      <!-- Quick AI Weather Alert -->
+      <div class="card" style="background-color: #fef3c7; border-color: #f59e0b;">
+        <h4 style="color: #92400e; margin-bottom: 8px;">⚠️ Weather Alert</h4>
+        <p style="color: #78350f; font-size: 0.9rem; line-height: 1.4;">
+          Moderate rainfall expected on Wednesday. Secure grain storage and delay fertilizer application for 48 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- AI Diagnostic & Chatbot Section -->
+    <section class="card" style="margin-top: 24px;">
+      <h3 style="margin-bottom: 16px;">🌱 AgriLink AI Assistant</h3>
+      
+      <!-- Chat Interface -->
+      <div style="background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 16px; height: 300px; overflow-y: auto; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px;">
+        
+        <!-- Bot Message -->
+        <div style="background-color: #e2e8f0; color: var(--text-main); padding: 12px; border-radius: 12px 12px 12px 0; max-width: 70%;">
+          Hello Rahim! How can I help you with your crops or soil diagnostics today?
+        </div>
+
+        <!-- User Message -->
+        <div style="background-color: var(--primary-color); color: white; padding: 12px; border-radius: 12px 12px 0 12px; max-width: 70%; align-self: flex-end;">
+          What is the ideal planting time for upcoming winter wheat in Bogura region?
+        </div>
+
+        <!-- Bot Response -->
+        <div style="background-color: #e2e8f0; color: var(--text-main); padding: 12px; border-radius: 12px 12px 12px 0; max-width: 75%;">
+          Based on current soil moisture and weather trends, the optimal sowing window is between <strong>November 15 and November 30</strong>. Ensure soil nitrogen levels are checked prior to planting.
+        </div>
+
+      </div>
+
+      <!-- Chat Input Field -->
+      <div style="display: flex; gap: 12px;">
+        <input type="text" placeholder="Ask AI about crop diseases, yield estimates, or fertilizers..." style="flex: 1; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius);">
+        <button class="btn">Ask AI</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

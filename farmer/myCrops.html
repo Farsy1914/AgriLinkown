@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - My Crops & Marketplace</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" >Dashboard</a>
+      <a href="myCrops.html" class="active">My Crops / Marketplace</a>
+      <a href="crowdFunding.html">Crowdfunding Projects</a>
+      <a href="ordersSales.html">Orders & Sales</a>
+      <a href="advisoryWeather.html">AI Advisory & Weather</a>
+      <a href="farmerSettings.html">Settings</a>
+      <a href="farmerProfile.html">Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>My Crops Management</h2>
+        <p style="color: var(--text-muted);">Manage your active agricultural listings, prices, and stock levels.</p>
+      </div>
+      <div class="user-profile">
+        <button class="btn" style="margin-right: 12px;">+ Add New Crop</button>
+        <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;"></a>
+        <div class="avatar">RU</div>
+      </div>
+    </header>
+
+    <!-- Crop Inventory Summary -->
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Total Listed Crops</h4>
+        <div class="value">8 Varieties</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Total Available Stock</h4>
+        <div class="value">1,450 kg</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Low Stock Alerts</h4>
+        <div class="value" style="color: #dc2626;">2 Items</div>
+      </div>
+    </section>
+
+    <!-- Crop Listings Table -->
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3>Active Marketplace Inventory</h3>
+        <input type="text" placeholder="Search crops..." style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; width: 220px;">
+      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Crop Name</th>
+            <th>Category</th>
+            <th>Price per Kg</th>
+            <th>Available Stock</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Wheat</strong></td>
+            <td>Grains</td>
+            <td>৳120 / kg</td>
+            <td>500 kg</td>
+            <td><span class="badge badge-success">In Stock</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Edit</button>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: #ef4444;">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Fresh Red Tomatoes</strong></td>
+            <td>Vegetables</td>
+            <td>৳60 / kg</td>
+            <td>45 kg</td>
+            <td><span class="badge badge-warning">Low Stock</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Edit</button>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: #ef4444;">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Basmati Rice</strong></td>
+            <td>Grains</td>
+            <td>৳180 / kg</td>
+            <td>800 kg</td>
+            <td><span class="badge badge-success">In Stock</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Edit</button>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: #ef4444;">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Green Chili</strong></td>
+            <td>Spices</td>
+            <td>৳140 / kg</td>
+            <td>0 kg</td>
+            <td><span class="badge" style="background: #fee2e2; color: #991b1b;">Out of Stock</span></td>
+            <td>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Restock</button>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: #ef4444;">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>

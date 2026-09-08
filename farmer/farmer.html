@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - Farmer Dashboard</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" class="active">Dashboard</a>
+      <a href="myCrops.html">My Crops / Marketplace</a>
+      <a href="crowdFunding.html">Crowdfunding Projects</a>
+      <a href="ordersSales.html">Orders & Sales</a>
+      <a href="advisoryWeather.html">AI Advisory & Weather</a>
+      <a href="farmerSettings.html">Settings</a>
+      <a href="farmerProfile.html">Profile</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Welcome Back, Rahim Uddin!</h2>
+        <p style="color: var(--text-muted);">Here is your farm performance overview today.</p>
+      </div>
+      <div class="user-profile">
+  <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;">
+    <div class="avatar" style="cursor: pointer;">RU</div>
+  </a>
+</div>
+    </header>
+
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Total Sales</h4>
+        <div class="value">৳45,200</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Active Listings</h4>
+        <div class="value">8 Crops</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Pending Orders</h4>
+        <div class="value">12 Delivery</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Crowdfunding Funds</h4>
+        <div class="value">৳85,000</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3>Recent Direct Orders</h3>
+        <button class="btn">+ Add New Crop</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Crop Name</th>
+            <th>Buyer</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#ORD-1024</td>
+            <td>Organic Wheat</td>
+            <td>Karim Store</td>
+            <td>150 kg</td>
+            <td>৳18,000</td>
+            <td><span class="badge badge-warning">In Transit</span></td>
+          </tr>
+          <tr>
+            <td>#ORD-1025</td>
+            <td>Fresh Tomatoes</td>
+            <td>Dhaka Fresh LLC</td>
+            <td>50 kg</td>
+            <td>৳3,000</td>
+            <td><span class="badge badge-success">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>

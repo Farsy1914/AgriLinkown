@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriLink - Farmer Profile</title>
+  <link rel="stylesheet" href="farmerstyle.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="brand">🌱 AgriLink</div>
+    <nav>
+      <a href="farmer.html" >Dashboard</a>
+      <a href="myCrops.html">My Crops / Marketplace</a>
+      <a href="crowdFunding.html">Crowdfunding Projects</a>
+      <a href="ordersSales.html">Orders & Sales</a>
+      <a href="advisoryWeather.html">AI Advisory & Weather</a>
+      <a href="farmerSettings.html">Settings</a>
+      <a href="farmerProfile.html" class="active">Profile</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Public Farmer Profile</h2>
+        <p style="color: var(--text-muted);">This is how buyers and investors view your profile on AgriLink.</p>
+      </div>
+      <div class="user-profile">
+        <a href="farmerProfile.html" style="text-decoration: none; cursor: pointer;">
+          <div class="avatar" style="border: 2px solid var(--primary-color);">RU</div>
+        </a>
+      </div>
+    </header>
+
+    <!-- Profile Header Card -->
+    <section class="card" style="margin-bottom: 24px;">
+      <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+        <div class="avatar" style="width: 90px; height: 90px; font-size: 2rem; background-color: var(--primary-dark);">RU</div>
+        
+        <div style="flex: 1;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+            <h2 style="color: var(--primary-dark);">Rahim Uddin</h2>
+            <span class="badge badge-success">✓ Verified Farmer</span>
+          </div>
+          <p style="color: var(--text-muted); margin-bottom: 8px;">📍 Sadar, Bogura, Rajshahi Division</p>
+          <p style="font-size: 0.95rem;">Specializes in <strong>Organic Wheat, Paddy Rice, and Fresh Vegetables</strong>. Farming for 12+ years.</p>
+        </div>
+
+        <div>
+          <a href="settings.html"><button class="btn" style="background-color: #64748b;">Edit Profile</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Farmer Bio & Performance Stats -->
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Trust Rating</h4>
+        <div class="value">⭐ 4.8 / 5.0</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Total Harvest Sold</h4>
+        <div class="value">12.5 Tons</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Successful Projects</h4>
+        <div class="value">4 Campaigns</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Member Since</h4>
+        <div class="value" style="font-size: 1.4rem;">Jan 2024</div>
+      </div>
+    </section>
+
+    <!-- Farmer Active Marketplace Listings -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px;">Rahim's Active Marketplace Crops</h3>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Crop Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Available Stock</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Wheat</strong></td>
+            <td>Grains</td>
+            <td>৳120 / kg</td>
+            <td>500 kg</td>
+            <td><button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">View Product</button></td>
+          </tr>
+          <tr>
+            <td><strong>Fresh Red Tomatoes</strong></td>
+            <td>Vegetables</td>
+            <td>৳60 / kg</td>
+            <td>45 kg</td>
+            <td><button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">View Product</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</body>
+</html>
