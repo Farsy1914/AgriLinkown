@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Disease Diagnostics</title>
+  <link rel="stylesheet" href="analyst-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="analyst-dashboard.html" class="brand">📊 AgriLink Insights</a>
+    <nav>
+      <a href="analyst-dashboard.html">Overview & Analytics</a>
+      <a href="project-audits.html">Project Feasibility Audits</a>
+      <a href="crop-diagnostics.html" class="active">AI Disease Diagnostics</a>
+      <a href="analyst-profile.html">My Profile</a>
+      <a href="analyst-settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>AI Flagged Disease Cases</h2>
+        <p style="color: var(--text-muted);">Review low-confidence AI diagnostics and provide expert guidance to farmers.</p>
+      </div>
+      <a href="analyst-settings.html" class="avatar">AN</a>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      
+      <!-- Diagnostic Query Card -->
+      <section class="card">
+        <h3 style="margin-bottom: 12px; color: #dc2626;">Flagged Case #DIAG-882</h3>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 12px;">Submitted by: Rahim Uddin (Bogura) | Wheat Crop</p>
+        
+        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;" alt="Leaf Disease">
+        
+        <div style="background: var(--bg-color); padding: 12px; border-radius: 8px; margin-bottom: 16px;">
+          <strong>AI Primary Diagnosis:</strong> Leaf Rust / Fungus Infection (62% Confidence)
+        </div>
+
+        <form>
+          <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Expert Analyst Prescription</label>
+          <textarea rows="3" style="margin-bottom: 12px;" placeholder="Write official fertilizer / treatment solution..."></textarea>
+          <button type="button" class="btn btn-success" onclick="alert('Prescription Sent to Farmer!')">Send Approved Advice</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>
