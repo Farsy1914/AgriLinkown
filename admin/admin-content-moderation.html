@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Content Moderation</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="admin-dashboard.html" class="brand">🛡️ AgriLink Admin</a>
+    <nav>
+      <a href="admin-dashboard.html">Control Center</a>
+      <a href="admin-user-management.html">User Approvals & Management</a>
+      <a href="admin-content-moderation.html" class="active">Marketplace & Project Audits</a>
+      <a href="admin-profile.html">Admin Profile</a>
+      <a href="admin-settings.html">System Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Marketplace & Campaign Moderation</h2>
+        <p style="color: var(--text-muted);">Audit reported produce listings and active farm crowdfunding campaigns.</p>
+      </div>
+      <a href="admin-profile.html" class="avatar" title="Admin Profile">AD</a>
+    </header>
+
+    <!-- Marketplace Audits -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-color);">Active Crop Listings</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Produce Title</th>
+            <th>Farmer</th>
+            <th>Price / Unit</th>
+            <th>Reported Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Wheat</strong></td>
+            <td>Rahim Uddin (Bogura)</td>
+            <td>৳120 / kg</td>
+            <td><span class="badge badge-verified">Clean / Verified</span></td>
+            <td>
+              <button class="btn btn-danger" style="padding: 4px 10px; font-size: 0.8rem;" onclick="alert('Item Flagged / Hidden')">Remove Listing</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Red Fresh Tomatoes</strong></td>
+            <td>Karim Hossain (Jessore)</td>
+            <td>৳60 / kg</td>
+            <td><span class="badge badge-pending">1 Report (Price High)</span></td>
+            <td>
+              <button class="btn btn-danger" style="padding: 4px 10px; font-size: 0.8rem;" onclick="alert('Listing Suspended')">Suspend Listing</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Crowdfunding Audits -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px; color: var(--primary-color);">Crowdfunding Projects Queue</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Project Title</th>
+            <th>Target Budget</th>
+            <th>Analyst Audit</th>
+            <th>Admin Moderation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Wheat Farm Phase 1</strong></td>
+            <td>৳1,00,000</td>
+            <td><span class="badge badge-verified">Approved by Dr. Azad</span></td>
+            <td>
+              <button class="btn btn-success" style="padding: 4px 10px; font-size: 0.8rem;" onclick="alert('Published to Public Marketplace!')">Publish Project</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>
