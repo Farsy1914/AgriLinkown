@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - User Verification & Management</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="admin-dashboard.html" class="brand">🛡️ AgriLink Admin</a>
+    <nav>
+      <a href="admin-dashboard.html">Control Center</a>
+      <a href="admin-user-management.html" class="active">User Approvals & Management</a>
+      <a href="admin-content-moderation.html">Marketplace & Project Audits</a>
+      <a href="admin-profile.html">Admin Profile</a>
+      <a href="admin-settings.html">System Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>User Verification & Management</h2>
+        <p style="color: var(--text-muted);">Verify user identities, update permissions, and restrict accounts.</p>
+      </div>
+      <a href="admin-profile.html" class="avatar" title="Admin Profile">AD</a>
+    </header>
+
+    <section class="card">
+      <h3 style="margin-bottom: 16px;">Pending Account Verification Requests</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Requested Role</th>
+            <th>Submitted Document</th>
+            <th>Verification Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rahim Uddin</strong></td>
+            <td>Farmer</td>
+            <td>NID: 1982736450123.pdf</td>
+            <td><span class="badge badge-pending">Pending Review</span></td>
+            <td>
+              <button class="btn btn-success" style="padding: 4px 10px; font-size: 0.8rem;" onclick="alert('User Approved & Badge Granted!')">Approve</button>
+              <button class="btn btn-danger" style="padding: 4px 10px; font-size: 0.8rem;">Reject</button>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>GreenAgro Traders</strong></td>
+            <td>Corporate Buyer</td>
+            <td>Trade License #DNCC-01928</td>
+            <td><span class="badge badge-pending">Pending Review</span></td>
+            <td>
+              <button class="btn btn-success" style="padding: 4px 10px; font-size: 0.8rem;" onclick="alert('User Approved & Badge Granted!')">Approve</button>
+              <button class="btn btn-danger" style="padding: 4px 10px; font-size: 0.8rem;">Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+</body>
+</html>
