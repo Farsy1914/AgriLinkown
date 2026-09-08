@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Admin Profile Edit</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="admin-dashboard.html" class="brand">🛡️ AgriLink Admin</a>
+    <nav>
+      <a href="admin-dashboard.html">Control Center</a>
+      <a href="admin-user-management.html">User Approvals & Management</a>
+      <a href="admin-content-moderation.html">Marketplace & Project Audits</a>
+      <a href="admin-profile.html" class="active">Admin Profile</a>
+      <a href="admin-settings.html">System Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>System Administrator Profile</h2>
+        <p style="color: var(--text-muted);">Edit personal credentials, system root avatar, and security configurations.</p>
+      </div>
+      <a href="admin-profile.html" class="avatar" id="avatar-preview-top" title="Admin Profile">AD</a>
+    </header>
+
+    <form>
+      <!-- Section 1: Avatar & Personal Information -->
+      <section class="card">
+        <h3 style="margin-bottom: 16px; color: var(--primary-color);">Personal Information & Avatar</h3>
+        
+        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
+          <div class="avatar" id="avatar-preview-large" style="width: 70px; height: 70px; font-size: 1.5rem;">AD</div>
+          <div>
+            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Upload Profile Photo</label>
+            <input type="file" style="width: auto;">
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Full Name</label>
+            <input type="text" value="Super Admin Master">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Official Email Address</label>
+            <input type="email" value="admin@agrilink.com">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Contact Phone</label>
+            <input type="text" value="+880 1700-000000">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Administrative Title</label>
+            <input type="text" value="Chief Platform Controller">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Security & Credentials Edit -->
+      <section class="card">
+        <h3 style="margin-bottom: 16px; color: var(--primary-color);">Root Password & Access Key</h3>
+        <div class="form-grid">
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">Current Root Password</label>
+            <div style="position: relative; display: flex; align-items: center;">
+              <input type="password" id="admin-curr-pass" placeholder="••••••••" style="padding-right: 65px;">
+              <button type="button" onclick="togglePassword('admin-curr-pass', this)" style="position: absolute; right: 10px; background: none; border: none; color: var(--accent-color); font-weight: 600; cursor: pointer; width: auto;">Show</button>
+            </div>
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px;">New Root Password</label>
+            <div style="position: relative; display: flex; align-items: center;">
+              <input type="password" id="admin-new-pass" placeholder="New Password" style="padding-right: 65px;">
+              <button type="button" onclick="togglePassword('admin-new-pass', this)" style="position: absolute; right: 10px; background: none; border: none; color: var(--accent-color); font-weight: 600; cursor: pointer; width: auto;">Show</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button type="button" class="btn" onclick="alert('Admin Profile and Name Updated Successfully!')" style="padding: 12px 32px; width: auto;">Update Admin Profile</button>
+    </form>
+  </main>
+
+  <script>
+    function togglePassword(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (input.type === "password") {
+        input.type = "text";
+        btn.textContent = "Hide";
+      } else {
+        input.type = "password";
+        btn.textContent = "Show";
+      }
+    }
+  </script>
+
+</body>
+</html>
