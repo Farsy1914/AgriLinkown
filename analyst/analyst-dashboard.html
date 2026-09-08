@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Analyst Dashboard</title>
+  <link rel="stylesheet" href="analyst-style.css">
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <a href="analyst-dashboard.html" class="brand">📊 AgriLink Insights</a>
+    <nav>
+      <a href="analyst-dashboard.html" class="active">Overview & Analytics</a>
+      <a href="project-audits.html">Project Feasibility Audits</a>
+      <a href="crop-diagnostics.html">AI Disease Diagnostics</a>
+      <a href="analyst-profile.html">My Profile</a>
+      <a href="analyst-settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Agricultural Analyst Overview</h2>
+        <p style="color: var(--text-muted);">Real-time market trends, regional crop yields, and risk evaluations.</p>
+      </div>
+      <a href="analyst-settings.html" class="avatar">AN</a>
+    </header>
+
+    <!-- Stat Metrics -->
+    <section class="grid-stats">
+      <div class="card stat-card">
+        <h4>Pending Project Audits</h4>
+        <div class="value">14 Projects</div>
+      </div>
+      <div class="card stat-card">
+        <h4>AI Diagnostics Flagged</h4>
+        <div class="value" style="color: #dc2626;">6 Cases</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Market Index Accuracy</h4>
+        <div class="value">98.4%</div>
+      </div>
+      <div class="card stat-card">
+        <h4>Avg. Risk Score Verified</h4>
+        <div class="value">Low Risk (8.2)</div>
+      </div>
+    </section>
+
+    <!-- Regional Market Index Table -->
+    <section class="card">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3>Regional Market Price Index & Trend Control</h3>
+        <button class="btn btn-success" style="width: auto;">+ Push Market Index Update</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Crop Name</th>
+            <th>Region / Division</th>
+            <th>Farmer Price Index</th>
+            <th>Retail Price Avg.</th>
+            <th>Market Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Wheat</strong></td>
+            <td>Bogura (Rajshahi)</td>
+            <td>৳120 / kg</td>
+            <td>৳135 / kg</td>
+            <td><span class="badge badge-verified">Stable Demand</span></td>
+            <td><button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Adjust Index</button></td>
+          </tr>
+          <tr>
+            <td><strong>Red Fresh Tomatoes</strong></td>
+            <td>Jessore (Khulna)</td>
+            <td>৳60 / kg</td>
+            <td>৳80 / kg</td>
+            <td><span class="badge badge-danger">High Volatility</span></td>
+            <td><button class="btn" style="padding: 4px 10px; font-size: 0.8rem;">Adjust Index</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+</body>
+</html>
