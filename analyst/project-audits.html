@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriLink - Feasibility Audits</title>
+  <link rel="stylesheet" href="analyst-style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <a href="analyst-dashboard.html" class="brand">📊 AgriLink Insights</a>
+    <nav>
+      <a href="analyst-dashboard.html">Overview & Analytics</a>
+      <a href="project-audits.html" class="active">Project Feasibility Audits</a>
+      <a href="crop-diagnostics.html">AI Disease Diagnostics</a>
+      <a href="analyst-profile.html">My Profile</a>
+      <a href="analyst-settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <div>
+        <h2>Crowdfunding Project Audits</h2>
+        <p style="color: var(--text-muted);">Evaluate farmer funding requests for risk score and return feasibility.</p>
+      </div>
+      <a href="analyst-settings.html" class="avatar">AN</a>
+    </header>
+
+    <section class="card">
+      <h3>Pending Crowdfunding Campaigns</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Project Title</th>
+            <th>Farmer</th>
+            <th>Location</th>
+            <th>Requested Target</th>
+            <th>Offered ROI</th>
+            <th>Feasibility Audit</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Organic Wheat Farm Phase 1</strong></td>
+            <td>Rahim Uddin</td>
+            <td>Bogura</td>
+            <td>৳1,00,000</td>
+            <td>15%</td>
+            <td><span class="badge badge-pending">Audit In Progress</span></td>
+            <td>
+              <button class="btn btn-success" style="padding: 4px 10px; font-size: 0.8rem;" onclick="alert('Project Feasibility Approved!')">Approve & Stamp</button>
+              <button class="btn" style="padding: 4px 10px; font-size: 0.8rem; background-color: #dc2626;">Reject Project</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Risk Analysis Form -->
+    <section class="card">
+      <h3 style="margin-bottom: 16px;">Analyst Feasibility Assessment Sheet</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+        <div>
+          <label style="display: block; margin-bottom: 6px; font-size: 0.9rem;">Soil & Weather Risk Index</label>
+          <select>
+            <option>Low Risk (Favorable Climate)</option>
+            <option>Medium Risk (Seasonal Flood Potential)</option>
+            <option>High Risk (Unfavorable Terrain)</option>
+          </select>
+        </div>
+        <div>
+          <label style="display: block; margin-bottom: 6px; font-size: 0.9rem;">Analyst Confidence Score (%)</label>
+          <input type="number" value="92">
+        </div>
+      </div>
+      <button class="btn">Submit Official Assessment Report</button>
+    </section>
+  </main>
+
+</body>
+</html>
